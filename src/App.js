@@ -1,6 +1,7 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Dashboard from 'pages/dashboard';
+import RAdmin from 'components/react-admin/admin';
 import Login from 'pages/login';
 import Register from 'pages/register';
 import Home from 'pages/home';
@@ -17,7 +18,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/password-reset/:token" element={<PasswordReset />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/pre_dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/*" element={<RAdmin />} />
         <Route path="*" element={<NotFoundPage/>}
         />
       </Routes>
